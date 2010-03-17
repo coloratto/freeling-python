@@ -9,3 +9,6 @@ _libmorfo_python.so: libmorfo_wrap.cxx
 libmorfo_wrap.cxx: libmorfo_python.i
 	swig -python -c++ -o libmorfo_wrap.cxx libmorfo_python.i
 
+
+clean:
+	rm -f libmorfo_wrap.cxx _libmorfo_python.so libmorfo_python.py libmorfo_python.pyc
