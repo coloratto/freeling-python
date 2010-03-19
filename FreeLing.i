@@ -33,7 +33,7 @@
 //
 ////////////////////////////////////////////////////////////////
 
-%module libmorfo_python
+%module FreeLing
 %{
  #include "freeling/traces.h"
  #include "freeling.h"
@@ -465,11 +465,11 @@ class maco_options {
     /// Since option data members are public and can be accessed directly
     /// from C++, the following methods are not necessary, but may become
     /// convenient sometimes.
-    void set_active_modules(bool,bool,bool,bool,bool,bool,bool,bool,int,bool);
+    void set_active_modules(bool,bool,bool,bool,bool,bool,bool,bool,int);
     void set_nummerical_points(const std::string &,const std::string &);
     void set_data_files(const std::string &,const std::string &,const std::string &,
                         const std::string &,const std::string &,const std::string &,
-                        const std::string &,const std::string &);
+                        const std::string &);
     void set_threshold(double);
 };
 
@@ -557,7 +557,7 @@ class senses {
       ~senses(); 
  
       /// sense annotate selected analysis for each word in given sentences
-      std::list<sentence> analyze(const std::list<sentence> &);
+      void analyze(std::list<sentence> &);
 };
 
 
