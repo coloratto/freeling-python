@@ -481,6 +481,7 @@ class maco {
 
       /// analyze sentences
       std::list<sentence> analyze(const std::list<sentence> &);
+      ~maco();
 };
 
 
@@ -492,6 +493,7 @@ class hmm_tagger {
 
        /// analyze sentences with default options
        std::list<sentence> analyze(const std::list<sentence> &);
+       
 };
 
 
